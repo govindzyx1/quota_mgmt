@@ -1,0 +1,17 @@
+<Quota name="##" type='flexi'>
+  <!--
+      To rate limit requests by a particular party,
+      such as a particular client app, or a particular
+      user, specify an identifier that uniquely
+      identifies the party or entity on behalf of which
+      you wish to collect counts. To rate limit
+      requests irrespective of any client or user,
+      omit the identifier.
+  -->
+  <!-- <Identifier ref='client_id' /> -->
+  <Distributed>true</Distributed>
+  <Synchronous>false</Synchronous>
+  <Interval>1</Interval>
+  <TimeUnit>minute</TimeUnit>
+  <Allow count='3' countRef='variable_containing_count'/>
+</Quota>
